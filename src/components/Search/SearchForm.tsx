@@ -35,6 +35,7 @@ export default (props: Props) => {
             onChange={handleTextChange}
             className="form-control"
             autoFocus={true}
+            data-cy="username"
           />
         </div>
         <div className="col-md-2 col-sm-3">

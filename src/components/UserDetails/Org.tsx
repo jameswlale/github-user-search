@@ -3,7 +3,11 @@ import Avatar from "../Avatar/Avatar";
 import { H3 } from "../Forms/Headers";
 import { IUserOrgs } from "../../types";
 
-type Props = IUserOrgs;
+type Props = {
+  login: string;
+  url: string;
+  avatar_url: string;
+};
 
 export default ({ login, url, avatar_url }: Props) => {
   return (
@@ -15,7 +19,7 @@ export default ({ login, url, avatar_url }: Props) => {
         <a href={url}>
           <H3>{login}</H3>
         </a>
-        <a href={url}>{url}</a>
+        <a href={url} className="org_url">{url}</a>
       </div>
     </div>
   );

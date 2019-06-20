@@ -21,7 +21,7 @@ export default ({ error, orgs, isLoading }: Props) => {
     return <Error />;
   }
 
-  if (!orgs || orgs.length < 0) {
+  if (!orgs || orgs.length < 1) {
     return <NoData />;
   }
 
