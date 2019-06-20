@@ -1,0 +1,27 @@
+@import "./css/components/repo";
+@import "./css/components/avatar";
+@import "./css/components/organisation";
+
+.container {
+  max-width: 960px;
+  margin-top: 1rem;
+}
+
+.content {
+  padding: 1rem;
+  color: #368ac7;
+}
+
+.search-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,17 @@
+export const GET_USER_REQUEST = "GET_USER_REQUEST";
+export type GET_USER_REQUEST = typeof GET_USER_REQUEST;
+
+export const GET_USER_SUCCESS = "GET_USER_SUCCESS";
+export type GET_USER_SUCCESS = typeof GET_USER_SUCCESS;
+
+export const GET_USER_ERROR = "GET_USER_ERROR";
+export type GET_USER_ERROR = typeof GET_USER_ERROR;
+
+export const GET_REPO_REQUEST = "GET_REPO_REQUEST";
+export type GET_REPO_REQUEST = typeof GET_REPO_REQUEST;
+
+export const GET_REPO_SUCCESS = "GET_REPO_SUCCESS";
+export type GET_REPO_SUCCESS = typeof GET_REPO_SUCCESS;
+
+export const GET_REPO_ERROR = "GET_REPO_ERROR";
+export type GET_REPO_ERROR = typeof GET_REPO_ERROR;
