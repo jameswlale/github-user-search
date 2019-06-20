@@ -1,3 +1,3 @@
-import * as userConstants  from "./user.constants";
+import * as userConstants from "./user.constants";
 
-export { userConstants } 
+export { userConstants };

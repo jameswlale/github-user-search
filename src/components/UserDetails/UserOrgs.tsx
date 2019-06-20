@@ -1,4 +1,4 @@
-import React from "react"; 
+import React from "react";
 import Org from "./Org";
 import { IUserOrgs } from "../../types";
 import Loading from "../Loading/Loading";

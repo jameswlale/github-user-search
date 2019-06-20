@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-import { NavLink } from "react-router-dom";
+import { NavLink as Link } from "react-router-dom";
 
 export interface INavLinkProps {
   href: string;
@@ -9,14 +9,15 @@ export interface INavLinkProps {
 }
 
 export default ({ text, href, isActive }: INavLinkProps) => {
-  
-  const classnames = classNames("nav-link");
+  const classnames = classNames("nav-link", {
+    test: isActive === true
+  });
 
   return (
     <li className="nav-item">
-      <NavLink className={classnames} to={href}>
+      <Link className={classnames} to={href} exact={true}>
         {text}
-      </NavLink>
+      </Link>
     </li>
   );
 };

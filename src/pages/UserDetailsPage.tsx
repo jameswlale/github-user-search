@@ -31,6 +31,7 @@ const UserDetailsPage = ({
 
   useEffect(() => {
     const section = url.endsWith("/repos") ? "repos" : "user";
+
     if (section === "user") {
       onInitUserDetails(match.params.username);
     } else {
@@ -38,6 +39,8 @@ const UserDetailsPage = ({
       onInitRepos(match.params.username);
     }
   }, [match.params.username, url, onInitUserDetails, onInitRepos]);
+
+  const isActive = (href: string) => url === href;
 
   return (
     <DefaultTemplate>
@@ -48,9 +51,21 @@ const UserDetailsPage = ({
         <div className="col-8">
           <UserSummary />
           <Nav>
-            <NavLink href={`/users/${username}`} text="User" />
-            <NavLink href={`/users/${username}/orgs`} text="Orgs" />
-            <NavLink href={`/users/${username}/repos`} text="Repositories" />
+            <NavLink
+              href={`/users/${username}`}
+              text="User"
+              isActive={isActive(`/users/${username}`)}
+            />
+            <NavLink
+              href={`/users/${username}/orgs`}
+              text="Orgs"
+              isActive={isActive(`/users/${username}/orgs`)}
+            />
+            <NavLink
+              href={`/users/${username}/repos`}
+              text="Repositories"
+              isActive={isActive(`/users/${username}/repos`)}
+            />
           </Nav>
           <div className="content">
             {url.endsWith(username) && <UserDetails />}

@@ -1,7 +1,6 @@
 import React from "react";
 import Avatar from "../Avatar/Avatar";
 import { H3 } from "../Forms/Headers";
-import { IUserOrgs } from "../../types";
 
 type Props = {
   login: string;
@@ -19,7 +18,9 @@ export default ({ login, url, avatar_url }: Props) => {
         <a href={url}>
           <H3>{login}</H3>
         </a>
-        <a href={url} className="org_url">{url}</a>
+        <a href={url} className="org_url">
+          {url}
+        </a>
       </div>
     </div>
   );

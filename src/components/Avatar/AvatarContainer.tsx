@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import SearchBox, { IStateProps } from "./Avatar";
+import Avatar, { IStateProps } from "./Avatar";
 import { AppState } from "../../store/reducers";
 
 function mapStateToProps(state: AppState): IStateProps {
@@ -8,4 +8,4 @@ function mapStateToProps(state: AppState): IStateProps {
   };
 }
 
-export default connect(mapStateToProps)(SearchBox);
+export default connect(mapStateToProps)(Avatar);

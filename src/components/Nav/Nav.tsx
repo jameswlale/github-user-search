@@ -18,10 +18,7 @@ export default (props: Props) => {
   }
   return (
     <ul className="nav nav-tabs">
-      <>
-        {props.children ||
-          props.links!.map(l => <NavLink key={l.href} {...l} />)}
-      </>
+      {props.children || props.links!.map(l => <NavLink key={l.href} {...l} />)}
     </ul>
   );
 };

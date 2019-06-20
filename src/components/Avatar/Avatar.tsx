@@ -1,11 +1,15 @@
 import React from "react";
+import classNames from "classnames";
 
 export interface IStateProps {
-  src?: string;
+  src: string | undefined;
+  className?: string;
 }
 
 type Props = IStateProps & React.ImgHTMLAttributes<HTMLImageElement>;
 
-export default ({ src, ...props }: Props) => {
-  return <img src={src} className="avatar" alt="" {...props} />;
+export default ({ className, src }: Props) => {
+  const classnames = classNames("avatar", className);
+
+  return <img src={src} className={classnames} alt="" />;
 };

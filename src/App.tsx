@@ -13,8 +13,16 @@ const App: React.FC = () => {
         <div className="App container">
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/users/:username" component={UserDetailsPage} />
-          <Route exact path="/users/:username/orgs" component={UserDetailsPage} />
-          <Route exact path="/users/:username/repos" component={UserDetailsPage} />
+          <Route
+            exact
+            path="/users/:username/orgs"
+            component={UserDetailsPage}
+          />
+          <Route
+            exact
+            path="/users/:username/repos"
+            component={UserDetailsPage}
+          />
         </div>
       </Provider>
     </Router>

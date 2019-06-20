@@ -5,7 +5,7 @@ import { AppState } from "../../store/reducers";
 function mapStateToProps(state: AppState): IStateProps {
   return {
     isLoading: state.isFetching,
-    orgs: state.userDetails && state.userDetails.orgs,
+    orgs: state.userDetails && state.userDetails.orgs
   };
 }
 

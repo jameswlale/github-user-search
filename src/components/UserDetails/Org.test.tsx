@@ -22,8 +22,14 @@ it("renders without crashing", () => {
     />
   );
 
-
   expect(wrapper.find("h3").text()).toEqual("facebook");
-  expect(wrapper.find(".org_url").getDOMNode().getAttribute("href")).toEqual("https://api.github.com/orgs/facebook");
-  expect(wrapper.find(Avatar).prop("src")).toEqual("https://avatars3.githubusercontent.com/u/69631?v=4");
+  expect(
+    wrapper
+      .find(".org_url")
+      .getDOMNode()
+      .getAttribute("href")
+  ).toEqual("https://api.github.com/orgs/facebook");
+  expect(wrapper.find(Avatar).prop("src")).toEqual(
+    "https://avatars3.githubusercontent.com/u/69631?v=4"
+  );
 });

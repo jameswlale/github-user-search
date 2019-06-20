@@ -39,11 +39,7 @@ export default (props: Props) => {
           />
         </div>
         <div className="col-md-2 col-sm-3">
-          <input
-            type="submit"
-            className="btn btn-primary"
-            value="Search"
-          />
+          <input type="submit" className="btn btn-primary" value="Search" />
         </div>
       </form>
     </div>
